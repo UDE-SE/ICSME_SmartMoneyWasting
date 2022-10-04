@@ -132,12 +132,11 @@ function calculateCorrectGasCosts(trace, baseFee, gasLimit) {
     trace.structLogs.forEach((e, index) => {
         const op = e.op;
 
-        // Ziel ist es, dass die Gaskosten der call-Opcodes korrigiert werden
-        // Daher können wir einen Stack verwenden, wobei das oberste Element immer die Gaskosten in der aktuellen Tiefe nachhält
+        // corect the gas costs of "call" opcodes
+        // use a stack where the element on top tracks the actual depth
         // 1 -> 2 -> 1 -> 3 -> 1
         // Stack 1 ; Stack 2 ; Stack 1 ; Stack 3 ; Stack 1
-
-
+        
         // but only consider opcodes in the analyzed smart contract (depth=1)
         if (e.depth == 1) {
             // in case we return from external code execution
