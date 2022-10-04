@@ -17,4 +17,28 @@ Now you can use e.g. [Postman](https://www.postman.com/) or your browser to quer
 To use the cost profiler in your browser, just open the URL ```localhost:8002/analyze/<txHash>```.
 For testing purposes browse the [Etherscan](https://etherscan.io/txs) blockchain explorer, select a transaction and call the local profiler url with the transaction hash.
 
+## Example
+Transaction [0x2319b4a7817fa870213412b9f90b114cd2081bc77a53b909e031e2969ba09c51](https://etherscan.io/tx/0x2319b4a7817fa870213412b9f90b114cd2081bc77a53b909e031e2969ba09c51)
 
+Request
+```
+GET localhost:8002/analyze/0x2319b4a7817fa870213412b9f90b114cd2081bc77a53b909e031e2969ba09c51
+```
+
+Response
+```JSON
+{
+    "hash": "0x2319b4a7817fa870213412b9f90b114cd2081bc77a53b909e031e2969ba09c51",
+    "gasUsed": 256667,
+    "gasLimit": 318730,
+    "sender": "0x080597ddc25abbac505d127cb09b5e38f8095661",
+    "receiver": "0x2af47a65da8cd66729b4209c22017d6a5c2d2400",
+    "baseFee": 24008,
+    "calculation": 1750,
+    "communication": 477,
+    "external": 24375,
+    "logging": 3905,
+    "storage": 202152,
+    "maxDepth": 2
+}
+```
