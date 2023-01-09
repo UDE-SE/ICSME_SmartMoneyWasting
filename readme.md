@@ -42,3 +42,8 @@ Response
     "maxDepth": 2
 }
 ```
+
+## Publication
+This tool was presented and used in the following [ICSME'22 paper](https://doi.org/10.1109/ICSME55016.2022.00034).
+
+> B. Severin, M. Hesenius, F. Blum, M. Hettmer and V. Gruhn, "Smart Money Wasting: Analyzing Gas Cost Drivers of Ethereum Smart Contracts," 2022 IEEE International Conference on Software Maintenance and Evolution (ICSME), 2022, pp. 293-304, doi: 10.1109/ICSME55016.2022.00034.
